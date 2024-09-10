@@ -1,0 +1,17 @@
+import random
+x = random.randint(0,100)
+count = 0
+while True :
+  n = int(input("Enter your guess(0-100): "))
+  if n <0 or n >100 :
+    print("--out of range--")
+  elif n == x :
+    print("--You WIN--")
+    break  
+  elif n <  x :
+    print("--Too low--")
+    count += 1
+  elif n > x : 
+    print("--Too high--")
+    count += 1
+print("You try %d times"%count)
